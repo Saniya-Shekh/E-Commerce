@@ -1,8 +1,60 @@
 import { Headset, Luggage, ShieldCheck } from "lucide-react";
-
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  let [time, setTime] = useState({
+    days: 10,
+    hours: 14,
+    minutes: 40,
+    seconds: 60,
+  });
+
+  useEffect(() => {
+    let targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 10);
+
+    let interval = setInterval(() => {
+      let currentDate = new Date();
+      let difference = targetDate - currentDate;
+
+      if (difference <= 0) {
+        clearInterval(interval);
+
+        setTime({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+
+        return;
+      }
+
+      let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+      let hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+
+      let minutes = Math.floor((difference / (1000 * 60)) % 60);
+
+      let seconds = Math.floor((difference / 1000) % 60);
+
+      setTime(
+        {
+          days,
+          hours,
+          minutes,
+          seconds,
+        },
+        1000,
+      );
+    });
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   let images = [
     {
       imagePath: "src/assets/img13.jpg",
@@ -67,6 +119,60 @@ const Home = () => {
 
       {/*  */}
       <section>
+        <div className=" h-125 w-[80%] mx-auto my-30 grid grid-cols-2 gap-8 relative ">
+          <div className=" bg-[url('/src/assets/grid_image3.jpg')] bg-cover bg-center">
+            <div className="absolute bottom-10 left-10">
+              <h2 className="">HOT LIST</h2>
+              <div className="flex gap-3 mb-1">
+                <h1 className="font-bold text-3xl">WOMEN</h1>
+                <h1 className="text-3xl font-medium">COLLECTION</h1>
+              </div>
+              <Link className="font-medium">SHOP NOW</Link>
+              <div className="h-0.5 w-10 border bg-black"></div>
+            </div>
+          </div>
+          <div className=" grid gap-8">
+            <div className="bg-[url('/src/assets/grid_image2.jpg')] bg-cover relative">
+              <div className="absolute bottom-8 left-10">
+                <h2>HOT LIST</h2>
+                <div className="flex">
+                  <h1 className="font-bold text-2xl">MEN</h1>
+                  <h1 className="font-medium text-2xl">COLLECTION</h1>
+                </div>
+                <Link className="font-medium">SHOP NOW</Link>
+                <div className="h-0.5 w-10 bg-black"></div>
+              </div>
+            </div>
+            <div className=" grid grid-cols-2 gap-8 relative">
+              <div className=" bg-[url('/src/assets/grid_image1.jpg')] bg-cover bg-center">
+                <div className="absolute bottom-8 left-10">
+                  <h2 className="">HOT LIST</h2>
+                  <div className="flex flex-col">
+                    <h1 className="font-bold text-2xl">KIDS</h1>
+                    <h1 className="font-medium text-2xl">COLLECTION</h1>
+                  </div>
+                  <Link>SHOP NOW</Link>
+                  <div className="h-0.5 w-10 bg-black font-bold"></div>
+                </div>
+              </div>
+              <div className=" bg-[#f4e5e0] relative">
+                <div className="absolute bottom-8 left-10">
+                  <div className="flex  flex-col gap-1 mb-1">
+                    <h1 className="font-bold text-2xl">E-GIFT</h1>
+                    <h1 className="font-medium text-2xl">CARDS</h1>
+                  </div>
+                  <p>SURPRISE SOMEONE WITH THE GIFT THEY REALLY WANT</p>
+                  <Link>SHOP NOW</Link>
+                  <div className="h-0.5 w-10 bg-black"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*  */}
+      <section>
         <div className="bg-[#ebebeb] h-100 w-full relative">
           <div className="absolute bottom-20 left-20">
             <div className="text-red-700 text-sm flex items-center gap-7 mb-6">
@@ -79,31 +185,39 @@ const Home = () => {
             </div>
             <Link className="font-medium">SHOP NOW</Link>
             <div className="h-0.5 w-10 bg-black"></div>
-            
+
             <div className="flex gap-6 items-center relative mt-10">
               <div>
-                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <h1 className="text-center font-stretch-50% text-2xl">
+                  {time.days}
+                </h1>
                 <p className="font-bold text-[#767676]">DAYS</p>
               </div>
               <div className="">
                 <div className="text-2xl absolute top-[-3px]">:</div>
               </div>
               <div>
-                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <h1 className="text-center font-stretch-50% text-2xl">
+                  {time.hours}
+                </h1>
                 <p className="font-bold text-[#767676]">HOURS</p>
               </div>
               <div className="">
                 <div className="text-2xl absolute top-[-3px]">:</div>
               </div>
               <div>
-                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <h1 className="text-center font-stretch-50% text-2xl">
+                  {time.minutes}
+                </h1>
                 <p className="font-bold text-[#767676]">MINUTES</p>
               </div>
               <div className="">
                 <div className="text-2xl absolute top-[-3px]">:</div>
               </div>
               <div>
-                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <h1 className="text-center font-stretch-50% text-2xl">
+                  {time.seconds}
+                </h1>
                 <p className="font-bold text-[#767676]">SECONDS</p>
               </div>
             </div>
