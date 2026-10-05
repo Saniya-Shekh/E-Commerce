@@ -1,10 +1,9 @@
 import { Headset, Luggage, ShieldCheck } from "lucide-react";
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const Home = () => {
   let images = [
-    ,
     {
       imagePath: "src/assets/img13.jpg",
     },
@@ -68,7 +67,52 @@ const Home = () => {
 
       {/*  */}
       <section>
-        
+        <div className="bg-[#ebebeb] h-100 w-full relative">
+          <div className="absolute bottom-20 left-20">
+            <div className="text-red-700 text-sm flex items-center gap-7 mb-6">
+              <div className="bg-red-700 h-0.5 w-9"></div>
+              DEAL OF THE WEEK
+            </div>
+            <div className="flex gap-3 mb-6">
+              <span className="font-bold text-6xl">SPRING</span>
+              <span className="font-medium text-6xl">COLLECTION</span>
+            </div>
+            <Link className="font-medium">SHOP NOW</Link>
+            <div className="h-0.5 w-10 bg-black"></div>
+            
+            <div className="flex gap-6 items-center relative mt-10">
+              <div>
+                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <p className="font-bold text-[#767676]">DAYS</p>
+              </div>
+              <div className="">
+                <div className="text-2xl absolute top-[-3px]">:</div>
+              </div>
+              <div>
+                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <p className="font-bold text-[#767676]">HOURS</p>
+              </div>
+              <div className="">
+                <div className="text-2xl absolute top-[-3px]">:</div>
+              </div>
+              <div>
+                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <p className="font-bold text-[#767676]">MINUTES</p>
+              </div>
+              <div className="">
+                <div className="text-2xl absolute top-[-3px]">:</div>
+              </div>
+              <div>
+                <h1 className="text-center font-stretch-50% text-2xl">00</h1>
+                <p className="font-bold text-[#767676]">SECONDS</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <img src="/public/image_13.jpg" alt="" className="" />
+          </div>
+        </div>
       </section>
 
       {/*  */}
@@ -83,18 +127,17 @@ const Home = () => {
                 Women's T-shirts
               </h1>
               <Link className="text-white font-medium text-sm">SHOP NOW</Link>
-            <div className="bg-white h-0.5 w-10"></div>
+              <div className="bg-white h-0.5 w-10"></div>
             </div>
           </div>
 
           <div className="bg-[url('/image_12.jpg')] bg-[60%_center] bg-no-repeat bg-cover w-100 h-90 relative">
-          <div className="absolute bottom-10 left-5">
-            <h2 className="mb-3 font-medium">STARTING AT $39</h2>
-            <h1 className="mb-3 font-bold text-2xl">Men's Sportswear</h1>
-            <Link className="font-medium">SHOP NOW</Link> 
-            <div className="bg-white h-0.5 w-10"></div>
-          </div>
-          
+            <div className="absolute bottom-10 left-5">
+              <h2 className="mb-3 font-medium">STARTING AT $39</h2>
+              <h1 className="mb-3 font-bold text-2xl">Men's Sportswear</h1>
+              <Link className="font-medium">SHOP NOW</Link>
+              <div className="bg-white h-0.5 w-10"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +145,6 @@ const Home = () => {
       {/*  */}
       <section>
         <h2 className="text-4xl text-center font-bold py-10">@UOMO</h2>
-
         <div className="px-30">
           <div className="flex flex-wrap items-center justify-center gap-2">
             {images.map((img) => {

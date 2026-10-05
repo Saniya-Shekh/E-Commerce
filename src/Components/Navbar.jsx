@@ -1,5 +1,4 @@
-import { Heart, ShoppingCart, UserPen, UserShield } from "lucide-react";
-import React from "react";
+import { Heart, ShoppingCart, UserPen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -21,7 +20,7 @@ const Navbar = () => {
                 <li>About</li>
                 </Link>
                 <Link>
-                <li>Contact Us</li>
+                <li>Contact</li>
                 </Link>
             </ul>
         </div>
