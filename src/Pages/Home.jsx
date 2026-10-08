@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Home = () => {
   let [time, setTime] = useState({
     days: 10,
-    hours: 14,
-    minutes: 40,
+    hours: 15,
+    minutes: 24,
     seconds: 60,
   });
 
@@ -16,6 +16,7 @@ const Home = () => {
 
     let interval = setInterval(() => {
       let currentDate = new Date();
+
       let difference = targetDate - currentDate;
 
       if (difference <= 0) {
@@ -27,7 +28,6 @@ const Home = () => {
           minutes: 0,
           seconds: 0,
         });
-
         return;
       }
 
@@ -50,9 +50,7 @@ const Home = () => {
       );
     });
 
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   let images = [
@@ -119,7 +117,7 @@ const Home = () => {
 
       {/*  */}
       <section>
-        <div className=" h-125 w-[80%] mx-auto my-30 grid grid-cols-2 gap-8 relative ">
+        <div className=" h-125 w-[80%] mx-auto my-30 grid grid-cols-2 gap-8 relative">
           <div className=" bg-[url('/src/assets/grid_image3.jpg')] bg-cover bg-center">
             <div className="absolute bottom-10 left-10">
               <h2 className="">HOT LIST</h2>
