@@ -1,13 +1,13 @@
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Home from "./Pages/Home";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
       <Navbar></Navbar>
       <div className="mt-18">
-        <Home></Home>
+        <Outlet />
       </div>
       <Footer></Footer>
     </div>
