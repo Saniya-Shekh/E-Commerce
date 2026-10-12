@@ -1,13 +1,13 @@
 import { Heart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-import {data} from "../data/ProductsData";
+import productsData from "../data/ProductsData";
 
-const Products = () => {
-    console.log(data)
+const Products = (data) => {
+  console.log(data);
   return (
     <section className="flex mt-30">
-      <div className=" w-[30%] h-dvh]"></div>
-      <div className=" w-[70%] h-dvh">
+      <div className="w-[30%]"></div>
+      <div className="w-[70%]">
         <div className="flex justify-between ">
           <div>
             <Link>
@@ -20,33 +20,36 @@ const Products = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-5">
-            {/* Product */}
-          <div className="w-70 p-3">
-            <img
-              src="/src/assets/New folder/productImage_11.jpg"
-              alt=""
-              className="h-80 w-full"
-            />
-            <div className="flex justify-between">
-              <h1>Dresses</h1>
-              <Heart />
-            </div>
-            <div className="">
-              <h2>Calvin Shorts</h2>
-              <h2>$62</h2>
-              <div className="flex items-center gap-3">
-                <span className="flex">
-                  <Star size={15}/>
-                  <Star size={15}/>
-                  <Star size={15}/>
-                  <Star size={15}/>
-                  <Star size={15}/>
-                </span>
-                <span>2k+ reviews</span>
+        <div className="mt-5 flex flex-wrap">
+          {/* Product */}
+          {productsData.map((item) => {
+            return (
+              <div className="w-70 p-3">
+                <div className="relative group">
+                  <img src={item.path} alt="" className="h-80 w-full " />
+                  <button className="w-full bg-white text-black py-2 absolute bottom-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">ADD TO CART</button>
+                </div>
+                <div className="flex justify-between">
+                  <h1>{item.category}</h1>
+                  <Heart />
+                </div>
+                <div className="">
+                  <h2>{item.name}</h2>
+                  <h2>{item.price}</h2>
+                  <div className="flex items-center gap-3">
+                    <span className="flex">
+                      <Star size={15} />
+                      <Star size={15} />
+                      <Star size={15} />
+                      <Star size={15} />
+                      <Star size={15} />
+                    </span>
+                    <span>{item.review} </span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

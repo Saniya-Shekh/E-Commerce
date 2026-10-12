@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./Pages/Home";
 // import About from "./Pages/About";
 import Products from "./Pages/Products";
+import productsData from "./data/ProductsData";
 
 
 
@@ -17,8 +18,9 @@ let Routes = createBrowserRouter([
         },
         {
           path:'/products',
-          element:<Products></Products>
+          element:<Products data={productsData}></Products>
         }, 
+        
         
       ]
     }

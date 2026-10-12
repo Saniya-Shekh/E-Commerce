@@ -21,7 +21,7 @@
         name: 'Shirt In Botanical Cheetah Print',
         price: '$60',
         review:'7k+ reviews',
-        path: '/src/assets/New folder/productImage_3.jpg'
+        path: '/src/assets/New folder/productImage_8.jpg'
     },
     {
         id:'4',
@@ -37,7 +37,7 @@
         name: 'Cableknit Shawl',
         price: '$100',
         review:'9k+ reviews',
-        path: '/src/assets/New folder/productImage_5.jpg'
+        path: '/src/assets/New folder/productImage_2.jpg'
     },
     {
         id:'6',
@@ -47,15 +47,7 @@
         review:'8k+ reviews',
         path: '/src/assets/New folder/productImage_6.jpg'
     },
-     {
-        id:'6',
-        category:'Dresses',
-        name: 'Shirt In Botanical Cheetah Print',
-        price: '$29',
-        review:'8k+ reviews',
-        path: '/src/assets/New folder/productImage_7.jpg'
-    }
-   
+    
 
 ]
 
