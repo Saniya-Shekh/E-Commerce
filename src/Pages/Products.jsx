@@ -24,9 +24,12 @@ const Products = (data) => {
           {/* Product */}
           {productsData.map((item) => {
             return (
-              <div className="w-70 p-3">
+              <div className="w-60 p-3">
                 <div className="relative group">
-                  <img src={item.path} alt="" className="h-80 w-full " />
+                  <img src={item.path} alt=""
+                   className="h-80 w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                  <img src={item.hoverPath} alt="" 
+                  className="h-80 w-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
                   <button className="w-full bg-white text-black py-2 absolute bottom-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">ADD TO CART</button>
                 </div>
                 <div className="flex justify-between">

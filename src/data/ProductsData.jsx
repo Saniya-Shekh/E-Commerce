@@ -5,7 +5,8 @@
         name: 'Cropped Faux Leather Jacket',
         price: '$29',
         review:'8k+ reviews',
-        path: '/src/assets/New folder/productImage_12.jpg'
+        path: '/src/assets/New folder/productImage_12.jpg',
+        hoverPath:'/src/assets/New folder/productImage_3.jpg'
     },
     {
         id:'2',
@@ -13,15 +14,17 @@
         name: 'Calvin Shorts',
         price: '$62',
         review:'2k+ reviews',
-        path: '/src/assets/New folder/productImage_11.jpg'
+        path: '/src/assets/New folder/productImage_11.jpg',
+        hoverPath:'/src/assets/New folder/productImage_10.jpg'
     },
     {
         id:'3',
         category:'Dresses',
-        name: 'Shirt In Botanical Cheetah Print',
+        name: 'Shirt In Botanical Cheetah',
         price: '$60',
         review:'7k+ reviews',
-        path: '/src/assets/New folder/productImage_8.jpg'
+        path: '/src/assets/New folder/productImage_8.jpg',
+        hoverPath:'/src/assets/New folder/productImage_9.jpg'
     },
     {
         id:'4',
@@ -29,7 +32,8 @@
         name: 'Cotton Jersey T-Shirt',
         price: '$17',
         review:'5k+ reviews',
-        path:'/src/assets/New folder/productImage_4.jpg'
+        path:'/src/assets/New folder/productImage_4.jpg',
+        hoverPath:'/src/assets/New folder/productImage_5.jpg'
     },
     {
         id:'5',
@@ -37,7 +41,8 @@
         name: 'Cableknit Shawl',
         price: '$100',
         review:'9k+ reviews',
-        path: '/src/assets/New folder/productImage_2.jpg'
+        path: '/src/assets/New folder/productImage_2.jpg',
+        hoverPath:'/src/assets/New folder/productImage_8.jpg'
     },
     {
         id:'6',
@@ -45,7 +50,8 @@
         name: 'Colorful Jacket',
         price: '$1k',
         review:'8k+ reviews',
-        path: '/src/assets/New folder/productImage_6.jpg'
+        path: '/src/assets/New folder/productImage_6.jpg',
+        hoverPath:'/src/assets/New folder/productImage_7.jpg'
     },
     
 
