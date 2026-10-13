@@ -6,6 +6,7 @@ import Products from "./Pages/Products";
 import productsData from "./data/ProductsData";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Login from "./Pages/Login";
 
 
 
@@ -29,6 +30,10 @@ let Routes = createBrowserRouter([
         {
           path:'/contact',
           element:<Contact></Contact>
+        },
+        {
+          path:'/login',
+          element:<Login></Login>
         }
         
         

@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <div>
         <ul className="flex gap-10">
-          <Link>
+          <Link to='/login'>
           <li><UserPen/></li>
           </Link>
           <Link>
