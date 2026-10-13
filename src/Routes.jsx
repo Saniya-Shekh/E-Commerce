@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import productsData from "./data/ProductsData";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 
 
@@ -24,6 +25,10 @@ let Routes = createBrowserRouter([
         {
           path: '/about',
           element:<About></About>
+        },
+        {
+          path:'/contact',
+          element:<Contact></Contact>
         }
         
         
