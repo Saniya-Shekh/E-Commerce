@@ -34,7 +34,7 @@ const Login = () => {
 
             <div className="flex items-center justify-center">
                 <p>Now account yet?</p>
-                <Link to=''>
+                <Link to='/register'>
                <p className="font-bold underline decoration-solid">Create Account</p>
                 </Link>
             </div>
