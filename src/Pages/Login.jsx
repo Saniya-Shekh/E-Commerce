@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <>
-      <div className="py-10">
+      <div className="p-10">
         <h2 className="font-bold text-center">LOGIN</h2>
         <div className=" flex items-center justify-center mt-10 ">
           <form action="" className="flex flex-col w-[40%] gap-6">
@@ -11,14 +11,14 @@ const Login = () => {
               type="text"
               placeholder="Enter Email"
               name="email"
-              className="h-12 border border-gray-400 p-5"
+              className="h-12 border border-gray-400 px-4"
             />
 
             <input
               type="text"
               placeholder="Enter Password"
               name="name"
-              className="border border-gray-400 h-12 p-5"
+              className="border border-gray-400 h-12 px-4"
             />
             <div className="flex justify-between">
               <div className="flex gap-2">

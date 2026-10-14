@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
+import ProductDetails from "./Pages/ProductDetails";
 
 
 
@@ -39,6 +40,10 @@ let Routes = createBrowserRouter([
         {
           path:'/register',
           element:<Registration></Registration>
+        },
+        {
+          path:'/product-detail',
+          element:<ProductDetails></ProductDetails>
         }
         
         
